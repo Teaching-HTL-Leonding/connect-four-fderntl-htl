@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./level2.component.css'],
 })
 export class Level2Component {
-  private readonly nrRows = 4;
-  private readonly nrCols = 4;
+  protected nrRows = 4;
+  protected nrCols = 4;
   private board!: number[][];
 
   private playerNames: string[];
