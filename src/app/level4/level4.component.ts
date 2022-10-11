@@ -6,7 +6,15 @@ import { BoardService } from './board.service';
   styleUrls: ['./level4.component.css'],
 })
 export class Level4Component {
-  constructor(public board: BoardService) {}
+  private _playerNames: string[];
+
+  constructor(public board: BoardService) {
+    this._playerNames = ['', 'Red', 'Blue'];
+  }
+
+  public getWinnerName(): string {
+    return this._playerNames[this.board.currentWinnerIndex];
+  }
 
   private getStyle(colIx: number, rowIx: number): string {
     let playerIx = this.board.getPlayerIx(colIx, rowIx);

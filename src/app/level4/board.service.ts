@@ -11,7 +11,6 @@ export class BoardService {
   public readonly nrCols = 7;
   public board!: number[][];
 
-  private _playerNames: string[];
   private _currentPlayerIndex!: number;
   private _currentWinnerIndex!: number;
 
@@ -24,7 +23,6 @@ export class BoardService {
   }
 
   constructor() {
-    this._playerNames = ['', 'Red', 'Blue'];
     this.restart();
   }
 
@@ -121,9 +119,5 @@ export class BoardService {
     }
 
     return 0;
-  }
-
-  public getWinnerName(): string {
-    return this._playerNames[this.currentWinnerIndex];
   }
 }

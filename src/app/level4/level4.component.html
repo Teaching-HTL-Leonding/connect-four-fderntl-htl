@@ -15,6 +15,6 @@
   </tbody>
 </table>
 
-<h2 [hidden]="this.board.currentWinnerIndex === 0">The winner is {{this.board.getWinnerName()}}</h2>
+<h2 [hidden]="this.board.currentWinnerIndex === 0">The winner is {{this.getWinnerName()}}</h2>
 
 <button (click)="this.board.restart()">Restart</button>
