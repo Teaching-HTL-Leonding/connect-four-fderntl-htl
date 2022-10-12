@@ -16,7 +16,7 @@ export class Level4Component {
     return this._playerNames[this.board.currentWinnerIndex];
   }
 
-  private getStyle(colIx: number, rowIx: number): string {
+  public getStyle(colIx: number, rowIx: number): string {
     let playerIx = this.board.getPlayerIx(colIx, rowIx);
 
     if (playerIx === 0) {
