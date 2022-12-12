@@ -6,7 +6,19 @@ import { BoardService } from '../level4/board.service';
   styleUrls: ['./level5.component.css'],
 })
 export class Level5Component {
-  constructor(private board: BoardService) {}
+  constructor(public board: BoardService) {}
 
-  // TODO: Enhance solution from level 4 by using Angular pipes
+  public getBoard(): number[][] {
+    let boardContent = [];
+
+    for (let rowIx = 0; rowIx < this.board.nrRows; rowIx++) {
+      let row = [];
+      for (let colIx = 0; colIx < this.board.nrCols; colIx++) {
+        row.push(this.board.getPlayerIx(colIx, rowIx));
+      }
+      boardContent.push(row);
+    }
+
+    return boardContent;
+  }
 }

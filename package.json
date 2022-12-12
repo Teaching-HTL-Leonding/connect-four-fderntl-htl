@@ -1,5 +1,5 @@
 {
-  "name": "connect-three",
+  "name": "connect-four",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
